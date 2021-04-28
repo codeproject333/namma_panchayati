@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <title>Namma Panchayati</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+</head>
+
+<body>
+
+<p th:text="${testName}"></p>
+
+<table>
+    <tr>
+        <th>WORK</th>
+        <th>STATUS</th>
+        <th>YEAR</th>
+        <th>GRAM</th>
+        <th>WORK TYPE</th>
+        <th>TOTAL</th>
+    </tr>
+    <tr th:each="works : ${workdata}">
+        <td th:text="${works.work}"></td>
+        <td th:text="${works.status}"></td>
+        <td th:text="${works.year}"></td>
+        <td th:text="${works.garam}"></td>
+        <td th:text="${works.work_type}"></td>
+        <td th:text="${works.Total}"></td>
+
+    </tr>
+</table>
+
+</body>
+
+</html>
